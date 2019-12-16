@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon.png">
+    
+    <title>Entre ou se Cadastre-se</title>
+    <link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+	integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+	crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-purpk nav-pills">
+        <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block"></span>
+            <a style="color: rgb(224, 224, 224);"class="navbar-brand d-none d-lg-inline-block h1 mb-0" href="index.html">
+                <img src="image/logo-devkey.png" width="30" height="30" class="d-inline-block align-top" alt="">DEVKEY</a>
+            </a>
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link m-2">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="course.html" class="nav-link m-2">CURSOS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link m-2 active-1">SOBRE</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contato.html" class="nav-link m-2 active-1">CONTATO</a>
+              </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link m-2">CADASTRE-SE</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 box">
+                <div class="col-sm-6  box-image">
+                        <div class="jumbotron">
+                                <h1 class="jumbotron-heading">Bem-vindo à<span class="color-purple-2"> DevKey</span></h1>
+                                <p class="jumbotron-text mt-3">Cursos on-line totalmente gratuitos para você se tornar um programador de sucesso. A chave para o desenvolvimento se encontra aqui!</p>
+                            </div>
+                  
+                </div>
+                <div class="col-sm-6 box-form mt-1">
+
+                    <div class="tabs-select mt-4">
+                        <a href="#" id="login-form" class="tab tab-selected" onclick="fnTabs(this)">Login</a>
+                        <a href="#" id="register-form" class="tab" onclick="fnTabs(this)">Cadastrar</a>
+                    </div>
+
+
+               <!--LOGIN-->     
+                    <div class="login-form tab-active tabs-page mt-5" id="login-form-tab">
+                        <div class="user-profile mt-5">
+                            <img src="image/avatar.png">
+                        </div>
+                        <form action="javascript:void(0);">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Endereço de email</label>
+                                <span class="far fa-envelope"></span><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+                              </div>
+                       
+                              <div class="form-group">
+                                  <label for="exampleInputPassword1">Senha</label>
+                                  <span class="fas fa-lock"></span><input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                                </div>
+
+                                <button type="submit" class="btn btn-purple-form mt-4">Entrar</button>
+
+
+                            <hr>
+
+
+
+                            <div class="lost-password align-center">
+                                <a href="#" class="tab" id="lost-form" onclick="fnTabs(this)">Esqueceu sua senha?</a>
+                            </div>
+                        </form>
+
+
+
+                    </div>
+
+<!--CADASTRO-->
+
+                    <div class="register-form tabs-page mt-5" id="register-form-tab">
+                        <form action="javascript:void(0);">
+                            
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nome</label>
+                                <span class="far fa-user"></span> <input type="nome" class="form-control" id="exampleInputNome" aria-describedby="nomeHelp" placeholder="Seu nome">
+                              </div> 
+                              <div class="form-group">
+                                      <label for="exampleInputEmail1">Endereço de email</label>
+                                      <span class="far fa-envelope"></span><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+                                    </div>
+                              <div class="form-group">
+                                <label for="exampleInputPassword1">Senha</label>
+                                <span class="fas fa-lock"></span><input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                              </div>
+                              <div class="form-group">
+                                      <label for="exampleInputPassword1">Confirmar Senha</label>
+                                      <span class="fas fa-lock"></span> <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                                    </div>
+                               
+                              <button type="submit" class="btn btn-purple-form mt-4">Cadastrar</button>
+
+                         
+                          
+                        </form>
+                    </div>
+
+
+                    <!--RECUPERAR SENHA-->
+                    <div class="lost-form tabs-page mt-5" id="lost-form-tab">
+                        <div class="form-header">
+                            <h2 class="align-center">Recuperar Senha</h2>
+                        </div>
+                        <form action="javascript:void(0);">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Endereço de email</label>
+                                <span class="far fa-envelope"></span><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+                              </div>
+                            <div class="input-group align-center">
+                                <button type="submit" class="btn btn-purple-form mt-4">Recuperar</button>
+                            </div>
+                            <div class="input-group align-center">
+                              
+                                <button type="button" class="btn btn-back mt-5" onclick="fnBack()">Voltar</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+          
+                    <!--
+                    <h2 class="color-purple text-center">Cadastre-se</h2>
+                    <form class="mt-5">
+                            <div class="form-group register-form tabs-page" id="register-form-tab">
+                              <label for="exampleInputEmail1">Nome</label>
+                              <span class="far fa-user"></span> <input type="nome" class="form-control" id="exampleInputNome" aria-describedby="nomeHelp" placeholder="Seu nome">
+                            </div> 
+                            <div class="form-group">
+                                    <label for="exampleInputEmail1">Endereço de email</label>
+                                    <span class="far fa-envelope"></span><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+                                  </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Senha</label>
+                              <span class="fas fa-lock"></span><input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                            </div>
+                            <div class="form-group">
+                                    <label for="exampleInputPassword1">Confirmar Senha</label>
+                                    <span class="fas fa-lock"></span> <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                                  </div>
+                             
+                            <button type="submit" class="btn btn-purple-form mt-4">Enviar</button>
+                          </form>
+
+
+-->
+
+
+                  
+                         
+                    </div>
+            </div>
+        </div>
+    </div>
+  
+    
+</section>
+<script src="js/global.js"></script>
+<script src="js/global.js"></script>
+
+</body>
+</html>
